@@ -25,4 +25,4 @@ RUN pip install awscli --upgrade --user
 RUN python3 -m pip install --user pipx
 RUN python3 -m pipx install pipenv
 
-ENTRYPOINT ["root/tools/entry.sh"]
+ENTRYPOINT ["/root/tools/entry.sh"]
