@@ -20,9 +20,11 @@ RUN apk add musl-dev
 RUN apk add make
 RUN apk add gcc
 
+RUN apk add aws-cli
+
 RUN npm i -g serverless@2.52.0
 
-RUN pip install awscli --upgrade --user
+#RUN pip install awscli --upgrade --user
 RUN python3 -m pip install --user pipx
 RUN python3 -m pipx install pipenv
 
