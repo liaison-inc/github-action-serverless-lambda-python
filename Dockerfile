@@ -10,6 +10,8 @@ LABEL "com.github.actions.description"="Wraps the Serverless Framework to enable
 LABEL "com.github.actions.icon"="zap"
 LABEL "com.github.actions.color"="red"
 
+COPY entry.sh /root/tools
+
 RUN apk update
 RUN apk upgrade
 RUN apk add bash
@@ -18,7 +20,9 @@ RUN apk add make
 RUN apk add gcc
 
 RUN npm i -g serverless@2.52.0
+
+RUN pip install awscli --upgrade --user
 RUN python3 -m pip install --user pipx
 RUN python3 -m pipx install pipenv
 
-ENTRYPOINT ["serverless"]
+ENTRYPOINT ["root/tools/entry.sh"]
