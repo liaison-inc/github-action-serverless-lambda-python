@@ -24,7 +24,7 @@ RUN apk add aws-cli
 
 RUN npm i -g serverless@2.52.0
 
-RUN serverless plugin install -n serverless-lift
+RUN npm install --save-dev serverless-lift
 RUN python3 -m pip install --user pipx
 RUN python3 -m pipx install pipenv
 
