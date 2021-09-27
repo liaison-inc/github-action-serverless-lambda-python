@@ -16,8 +16,10 @@ RUN apk add bash
 RUN apk add musl-dev
 RUN apk add make
 RUN apk add gcc
+RUN apk add libenchant
 
 RUN npm i -g serverless@2.52.0
+RUN serverless plugin install -n serverless-lift
 RUN python3 -m pip install --user pipx
 RUN python3 -m pipx install pipenv
 
