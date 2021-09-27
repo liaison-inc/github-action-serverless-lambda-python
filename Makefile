@@ -1,5 +1,8 @@
+ include .env.local
+ export
+
 NAME := "github-actions-serverless-lambda-python"
-PROFILE := "liaison"
+PROFILE := ${AWS_PROFILE}
 REGION := "us-east-2"
 BRANCH := $$(git rev-parse --abbrev-ref HEAD)
 TAG := ${BRANCH}
