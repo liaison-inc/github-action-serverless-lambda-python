@@ -38,7 +38,6 @@ build:
 	docker build -t ${NAME}:${TAG} .
 
 deploy:
-	echo "${TAG}"
 	make build
 	make -- --push
 	docker --version; \
