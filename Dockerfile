@@ -19,7 +19,6 @@ RUN apk add bash
 RUN apk add musl-dev
 RUN apk add make
 RUN apk add gcc
-RUN apk add --update alpine-sdk
 
 RUN apk add aws-cli
 
